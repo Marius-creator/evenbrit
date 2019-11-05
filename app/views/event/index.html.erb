@@ -1,1 +1,47 @@
-<h1>Welcome to eventbrit</h1>
+<div class="jumbotron jumbotron-fluid jumbotron-hero">
+  <div class='container'>
+    <div class="text-center">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>WELCOME ON EVENBRIT<h1>
+      <h5>All events in your town</h5>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <ul>
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+        </li>
+    ​
+        <li>
+          Voici ton email : <%= current_user.email %>
+        </li>
+    ​
+        <li>
+          <%= link_to "Secret page", static_pages_secret_path %>
+        </li>
+    ​
+        <li>
+          <%= link_to "Edit email / password", edit_user_registration_path %>
+        </li>
+    ​
+      <% else %>
+        <li>    
+          <%= link_to "Sign in", new_user_session_path %>
+        </li>
+    ​
+        <li>
+          <%= link_to "Sign up", new_user_registration_path %>
+        </li>
+    ​
+        <% end %>
+        </ul>
+    
+  </div>
+</div>
