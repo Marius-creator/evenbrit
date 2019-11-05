@@ -27,7 +27,7 @@
 
   <body>  
   <div class="d-flex flex-column flex-md-row align-items-center px-md-4 bg-white">
-    <a class="mr-md-auto navbar-brand" href="#" title="Home"><img style="max-width:50px;" src="/assets/E.png"></a>
+    <a class="mr-md-auto navbar-brand" href="<%= root_path %>" title="Home"><img style="max-width:50px;" src="/assets/E.png"></a>
     
     <nav class="my-2 my-md-0 mr-md-10">
         <a href="<%= root_path %>" class ="btn btn-outline rounded-pill">Home</a>
@@ -40,8 +40,8 @@
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a href="<%= new_user_session_path %>" class="dropdown-item">Log in</a>
         <a href="<%= edit_user_registration_path %>" class="dropdown-item">Edit Profile</a>
-        <a href="<%= destroy_user_session_path %>" class="dropdown-item">Log out</a>
         <a href="<%= new_user_registration_path %>" class="dropdown-item">Sign Up</a>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class:'dropdown-item' %>
       </div>
 
     </nav>
