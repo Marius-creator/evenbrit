@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    font-family: 'Varela Round', cursive;
+    color: white;
+  }
+
+.jumbotron { 
+
+    background-image: url("luke-chesser-B_oL3jEt5L4-unsplash.jpg");
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+    background-position: center;
+    background-size: cover; 
+    background-attachment: fixed ;
+
+  }
+
+footer {
+    margin-top: 40px;
+  }
