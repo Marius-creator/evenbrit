@@ -15,15 +15,48 @@
  */
 
 body {
+    
     font-family: 'Varela Round', cursive;
     color: white;
   }
 
+a:link{
+
+color: black;
+
+text-decoration: none;
+
+}
+
+a:visited {
+
+color: black
+
+}
+
+a:hover {
+
+text-decoration: underline
+
+}
+
+a:active {
+
+color: black
+
+}
+
 .jumbotron { 
 
+
     background-image: url("luke-chesser-B_oL3jEt5L4-unsplash.jpg");
-    margin-top: 0px;
-    margin-bottom: 0px;
+    position: fixed; 
+    top: 20; 
+    left: 0; 
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
     
     background-position: center;
     background-size: cover; 
@@ -32,5 +65,5 @@ body {
   }
 
 footer {
-    margin-top: 40px;
+    margin-top: 540px;
   }

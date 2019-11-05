@@ -6,42 +6,29 @@
     <br>
     <br>
     <h1>WELCOME ON EVENBRIT<h1>
-      <h5>All events in your town</h5>
-    </div>
+      <h5>All events in your city</h5>
     <br>
     <br>
     <br>
     <br>
-    <br>
-        <ul>
+    <br> 
       <% if user_signed_in? %>
-        <li>
-          <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-        </li>
-    ​
-        <li>
-          Voici ton email : <%= current_user.email %>
-        </li>
-    ​
-        <li>
-          <%= link_to "Secret page", static_pages_secret_path %>
-        </li>
-    ​
-        <li>
-          <%= link_to "Edit email / password", edit_user_registration_path %>
-        </li>
-    ​
+        <div class="text-center">
+        
+          <p>Voici ton email : <%= current_user.email %></p>
+     
+          <%= link_to "Edit email / password", edit_user_registration_path, class:'btn btn-outline-dark rounded-pill' %>
+
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:'btn btn-outline-dark rounded-pill' %>
+    ​    </div>
+
       <% else %>
-        <li>    
-          <%= link_to "Sign in", new_user_session_path %>
-        </li>
-    ​
-        <li>
-          <%= link_to "Sign up", new_user_registration_path %>
-        </li>
-    ​
-        <% end %>
-        </ul>
+
+          <%= link_to "Sign in", new_user_session_path, class:'btn btn-outline-light btn-lg rounded-pill'%>
+          <%= link_to "Sign up", new_user_registration_path, class:'btn btn-outline-light btn-lg rounded-pill' %>
     
+        <% end %>
+      
+    </div>
   </div>
 </div>
