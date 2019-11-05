@@ -24,8 +24,8 @@
           <br>
       <% else %>
 
-          <%= link_to "Sign in", new_user_session_path, class:'btn btn-outline-light btn-lg rounded-pill'%>
-          <%= link_to "Sign up", new_user_registration_path, class:'btn btn-outline-light btn-lg rounded-pill' %>
+          <%= link_to "Sign in", new_user_session_path, class:'btn btn-1 btn-lg rounded-pill'%>
+          <%= link_to "Sign up", new_user_registration_path, class:'btn btn-2 btn-lg rounded-pill' %>
           <br>
           <br>
         <% end %>
@@ -37,8 +37,8 @@
                   <h4 class="card-title"><%= link_to event.title, event_path(event) %></h4>
                   <p class="card-text"><%= truncate(event.description, length: 100) %></p>
                   <% unless event[:admin_id] != event.admin_id %>
-                  <p> <%= link_to "Edit", edit_event_path(event), class: "btn btn-outline-primary rounded-pill" %> 
-                      <%= link_to "Delete", event_path(event), method: :delete, data: { confirm: "Are you sure you want to delete this event?"}, class:"btn btn-outline-danger rounded-pill" %>   
+                  <p> <%= link_to "Edit", edit_event_path(event), class: "btn btn-3 rounded-pill" %> 
+                      <%= link_to "Delete", event_path(event), method: :delete, data: { confirm: "Are you sure you want to delete this event?"}, class:"btn btn-4 rounded-pill" %>   
                   </p> 
                   <% end %>
               </div>
