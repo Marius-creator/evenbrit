@@ -1,9 +1,18 @@
 class User < ApplicationRecord
-  has_many :events #Un utilisateur peut administrer plusieurs événements.
-  has_many :events, through: :participations #Un utilisateur peut participer à plusieurs événements au travers des participations.
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 
-  after_create :welcome_send
-    def welcome_send
-      UserMailer.welcome_email(self).deliver_now
-    end
+      has_many :events, foreign_key: 'admin_id', class_name: "Event", dependent: :destroy
+        has_many :participations, foreign_key: 'attendee_id', class_name: "Participation", dependent: :destroy
+        has_many :events, through: :participations
+
+        # after_create :welcome_send
+        #
+        # def welcome_send
+        #   UserMailer.welcome_email(self).deliver_now
+        # end
+
+
 end

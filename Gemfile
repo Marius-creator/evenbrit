@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'faker'
 gem 'letter_opener'
 gem 'dotenv-rails'
+gem 'devise'
+gem 'table_print'
 ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
